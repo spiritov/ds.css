@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "tw": "npx @tailwindcss/cli -i ./src/ds.css -o ./src/output.css --watch",
+    "sync": "browser-sync start --server --files '.src/ds.html, .src/test.html, .src/landing.html, ./src/output.css'"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
+  }
+}
