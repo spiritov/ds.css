@@ -1,5 +1,4 @@
 /*! tailwindcss v4.3.1 | MIT License | https://tailwindcss.com */
-@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -7,7 +6,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -214,8 +212,8 @@
   .grid {
     display: grid;
   }
-  .table {
-    display: table;
+  .h-7\.5 {
+    height: calc(var(--spacing) * 7.5);
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
@@ -231,6 +229,9 @@
   }
   .min-h-dvh {
     min-height: 100dvh;
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
   }
   .w-82 {
     width: calc(var(--spacing) * 82);
@@ -255,12 +256,6 @@
   }
   .flex-shrink {
     flex-shrink: 1;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -294,10 +289,6 @@
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .bg-ds-text-focus {
     background-color: var(--color-ds-text-focus);
@@ -350,17 +341,11 @@
   .bg-ds-theme-yellow {
     background-color: var(--color-ds-theme-yellow);
   }
-  .p-3 {
-    padding: calc(var(--spacing) * 3);
-  }
   .p-3\.5 {
     padding: calc(var(--spacing) * 3.5);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
-  }
-  .p-7 {
-    padding: calc(var(--spacing) * 7);
   }
   .p-7\.5 {
     padding: calc(var(--spacing) * 7.5);
@@ -373,6 +358,9 @@
   }
   .pr-0 {
     padding-right: 0;
+  }
+  .pl-1 {
+    padding-left: var(--spacing);
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -388,18 +376,8 @@
   .text-black {
     color: var(--color-black);
   }
-  .text-blue-400 {
-    color: var(--color-blue-400);
-  }
   .text-ds-theme-blue {
     color: var(--color-ds-theme-blue);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
 }
 @font-face {
@@ -831,22 +809,4 @@ p, .pictochat-message {
 }
 .loading-9 {
   animation: 533.33ms infinite loading-9;
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
-    }
-  }
 }
