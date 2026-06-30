@@ -9,7 +9,7 @@
     "tailwindcss": "^4.3.1"
   },
   "name": "@spiritov/ds.css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A css framework recreating the DS Lite's UI",
   "main": "dist/ds.css",
   "files": [
