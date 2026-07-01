@@ -23,72 +23,122 @@
   --color-ds-pictochat-exit: #00fbba;
 
   /* theme colors */
-  --color-ds-theme-slate: #61829a;
-  --color-ds-theme-maroon: #ba4900;
-  --color-ds-theme-red: #fb0018;
-  --color-ds-theme-pink: #fb8afb;
-  --color-ds-theme-orange: #fb9200;
-  --color-ds-theme-yellow: #f3e300;
-  --color-ds-theme-neonyellow: #aafb00;
-  --color-ds-theme-lime: #00fb00;
-  --color-ds-theme-green: #00a238;
-  --color-ds-theme-teal: #49db8a;
-  --color-ds-theme-turquoise: #30baf3;
-  --color-ds-theme-blue: #0059f3;
-  --color-ds-theme-navy: #000092;
-  --color-ds-theme-darkpurple: #8a00d3;
-  --color-ds-theme-magenta: #d300eb;
-  --color-ds-theme-fuschia: #fb0092;
+  --color-ds-slate: #61829a;
+  --color-ds-maroon: #ba4900;
+  --color-ds-red: #fb0018;
+  --color-ds-pink: #fb8afb;
+  --color-ds-orange: #fb9200;
+  --color-ds-yellow: #f3e300;
+  --color-ds-neonyellow: #aafb00;
+  --color-ds-lime: #00fb00;
+  --color-ds-green: #00a238;
+  --color-ds-teal: #49db8a;
+  --color-ds-turquoise: #30baf3;
+  --color-ds-blue: #0059f3;
+  --color-ds-navy: #000092;
+  --color-ds-darkpurple: #8a00d3;
+  --color-ds-magenta: #d300eb;
+  --color-ds-fuschia: #fb0092;
 }
 
 /* ds theme colors */
 .ds-slate {
-  background-color: var(--color-ds-theme-slate);
+  background-color: var(--color-ds-slate);
 }
 .ds-maroon {
-  background-color: var(--color-ds-theme-maroon);
+  background-color: var(--color-ds-maroon);
 }
 .ds-red {
-  background-color: var(--color-ds-theme-red);
+  background-color: var(--color-ds-red);
 }
 .ds-pink {
-  background-color: var(--color-ds-theme-pink);
+  background-color: var(--color-ds-pink);
 }
 .ds-orange {
-  background-color: var(--color-ds-theme-orange);
+  background-color: var(--color-ds-orange);
 }
 .ds-yellow {
-  background-color: var(--color-ds-theme-yellow);
+  background-color: var(--color-ds-yellow);
 }
 .ds-neonyellow {
-  background-color: var(--color-ds-theme-neonyellow);
+  background-color: var(--color-ds-neonyellow);
 }
 .ds-lime {
-  background-color: var(--color-ds-theme-lime);
+  background-color: var(--color-ds-lime);
 }
 .ds-green {
-  background-color: var(--color-ds-theme-green);
+  background-color: var(--color-ds-green);
 }
 .ds-teal {
-  background-color: var(--color-ds-theme-teal);
+  background-color: var(--color-ds-teal);
 }
 .ds-turquoise {
-  background-color: var(--color-ds-theme-turquoise);
+  background-color: var(--color-ds-turquoise);
 }
 .ds-blue {
-  background-color: var(--color-ds-theme-blue);
+  background-color: var(--color-ds-blue);
 }
 .ds-navy {
-  background-color: var(--color-ds-theme-navy);
+  background-color: var(--color-ds-navy);
 }
 .ds-darkpurple {
-  background-color: var(--color-ds-theme-darkpurple);
+  background-color: var(--color-ds-darkpurple);
 }
 .ds-magenta {
-  background-color: var(--color-ds-theme-magenta);
+  background-color: var(--color-ds-magenta);
 }
 .ds-fuschia {
-  background-color: var(--color-ds-theme-fuschia);
+  background-color: var(--color-ds-fuschia);
+}
+
+/* 50% opacity colors (good for pictochat header) */
+.ds-slate-50 {
+  background-color: color-mix(in oklab, var(--color-ds-slate) 50%);
+}
+.ds-maroon-50 {
+  background-color: color-mix(in oklab, var(--color-ds-maroon) 50%);
+}
+.ds-red-50 {
+  background-color: color-mix(in oklab, var(--color-ds-red) 50%);
+}
+.ds-pink-50 {
+  background-color: color-mix(in oklab, var(--color-ds-pink) 50%);
+}
+.ds-orange-50 {
+  background-color: color-mix(in oklab, var(--color-ds-orange) 50%);
+}
+.ds-yellow-50 {
+  background-color: color-mix(in oklab, var(--color-ds-yellow) 50%);
+}
+.ds-neonyellow-50 {
+  background-color: color-mix(in oklab, var(--color-ds-neonyellow) 50%);
+}
+.ds-lime-50 {
+  background-color: color-mix(in oklab, var(--color-ds-lime) 50%);
+}
+.ds-green-50 {
+  background-color: color-mix(in oklab, var(--color-ds-green) 50%);
+}
+.ds-teal-50 {
+  background-color: color-mix(in oklab, var(--color-ds-teal) 50%);
+}
+.ds-turquoise-50 {
+  background-color: color-mix(in oklab, var(--color-ds-turquoise) 50%);
+}
+.ds-blue-50 {
+  background-color: color-mix(in oklab, var(--color-ds-blue) 50%);
+}
+.ds-navy-50 {
+  background-color: color-mix(in oklab, var(--color-ds-navy) 50%);
+}
+.ds-darkpurple-50 {
+  background-color: color-mix(in oklab, var(--color-ds-darkpurple) 50%);
+}
+.ds-magenta-50 {
+  background-color: color-mix(in oklab, var(--color-ds-magenta) 50%);
+}
+.ds-fuschia-50 {
+  background-color: color-mix(in oklab, var(--color-ds-fuschia) 50%);
 }
 
 .pictochat-enter-highlight {
@@ -784,6 +834,12 @@ button:active:not(:hover),
   background-position: top;
   background-repeat: no-repeat;
   image-rendering: pixelated;
+}
+
+/* shrink nested pictochat messages */
+.pictochat-message > .pictochat-message,
+.pictochat-message > .pictochat-status {
+  width: 100%;
 }
 
 .pictochat-status {
