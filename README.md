@@ -1,4 +1,5 @@
-<img width="754" height="256" alt="image" src="https://github.com/user-attachments/assets/4a397b7c-69ea-4ef8-894e-459da7d0369c" />
+<img width="682" height="262" alt="image" src="https://github.com/user-attachments/assets/af279533-d547-41ff-88c3-b2101c5242a5" />
+
 
 # ds.css
 A css framework recreating the DS Lite's UI. Preview what's included [here](https://css.ds.dreamyard.xyz).
