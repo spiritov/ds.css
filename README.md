@@ -3,16 +3,14 @@
 # ds.css
 A css framework recreating the DS Lite's UI. Preview what's included [here](https://css.ds.dreamyard.xyz).
 
-to use it, you can either copy the contents of `/dist`, or
+to use it, you can either copy and use the contents of `/dist`, or install via npm
 
 ```sh
 npm i @spiritov/ds.css
 ```
 
 ## todo
-- remove tailwind dependency on npm (oopsie)
-- nicer docs / preview site
 - clock (with optional js, [like here](https://ds.dreamyard.xyz/))
 - calendar (with optional js, [like here](https://ds.dreamyard.xyz/))
-- more pictochat components
+- more pictochat components(?)
 - extra ds-inspired components(?)
