@@ -2,9 +2,9 @@
 
 # ds.css
 
-A css framework recreating the DS Lite's UI. Preview what's included [here](https://css.ds.dreamyard.xyz)!
+A css framework recreating the DS Lite's UI. Preview what's included [here](https://css.ds.dreamyard.xyz).
 
-to use it, you can either copy and use the contents of `/css`, or install via npm
+to use it, you can either copy and use the contents of `/dist`, or install via npm
 
 ```sh
 npm i @spiritov/ds.css
