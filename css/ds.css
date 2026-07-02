@@ -39,6 +39,41 @@
 	--color-ds-darkpurple: #8a00d3;
 	--color-ds-magenta: #d300eb;
 	--color-ds-fuschia: #fb0092;
+
+	--width-alert: 412px;
+	--width-button: 160px;
+	--width-button-lg: 220px;
+	--width-button-square: 36px;
+	--width-button-radio: 192px;
+	--width-radio-label: 62px;
+	--width-input: 322px;
+	--width-input-lg: 418px;
+	--width-input-bumper: 28px;
+	--width-details-summary: 446px;
+	--width-details-p: 444px;
+	--width-pictochat: 468px;
+	--width-pictochat-header: 118px;
+	--width-info-container: 416px;
+
+	--height-alert: 134px;
+	--height-button: 36px;
+	--height-button-radio: 62px;
+	--height-radio-label: 192px;
+	--height-input: 34px;
+	--height-input-bumper: 30px;
+	--height-details-summary: 34px;
+	--height-details-p: 94px;
+	--height-bar: 32px;
+	--height-bar-lg: 46px;
+	--height-pictochat-header: 27px;
+	--height-info: 96px;
+	--height-info-container: 90px;
+	--height-info-label: 26px;
+	--height-info-text: 64px;
+
+	--size-info-square: 90px;
+
+	--text-padding: 4px;
 }
 
 /* ds theme colors */
@@ -338,13 +373,13 @@
 		height: fit-content;
 		flex-shrink: 0;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: calc(0.25rem * 0.5);
+		gap: 2px;
 	}
 
 	.loading-container > div {
 		background-color: var(--color-ds-loading);
-		width: calc(0.25rem * 1.5);
-		height: calc(0.25rem * 1.5);
+		width: 6px;
+		height: 6px;
 	}
 
 	@keyframes loading-1 {
@@ -492,19 +527,40 @@
 	}
 }
 
-/* input & button elements */
+/* link styling */
+a:link {
+	color: var(--color-ds-blue);
+	text-decoration-line: underline;
 
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+}
+
+a:visited {
+	color: var(--color-ds-darkpurple);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:any-link > button {
+	color: black;
+}
+
+/* input & buttons */
 button,
 input[type='text'] {
 	border-style: solid;
 	border-width: 2px;
-	padding-inline: 0.25rem;
 	text-wrap: nowrap;
 }
 
 input[type='text'] {
-	height: calc(0.25rem * 8.5);
-	width: calc(0.25rem * 80.5);
+	height: var(--height-input);
+	width: var(--width-input);
+	/* 6px */
+	padding-inline: calc(var(--text-padding) * 1.5);
 	border-color: black;
 	color: white;
 	outline-style: none;
@@ -519,8 +575,8 @@ input[type='text'] {
 }
 
 input[type='radio'] {
-	height: calc(0.25rem * 15.5);
-	width: calc(0.25rem * 48);
+	height: var(--height-button-radio);
+	width: var(--width-button-radio);
 	appearance: none;
 	border-style: solid;
 	border-width: 2px;
@@ -533,11 +589,11 @@ input[type='radio']:checked {
 }
 
 button {
-	height: calc(0.25rem * 9);
-	width: calc(0.25rem * 40);
+	height: var(--width-button-square);
+	width: var(--width-button);
 	cursor: pointer;
 	border-color: var(--color-ds-darkgrey);
-	padding-inline: calc(0.25rem * 0.5);
+	padding-inline: var(--text-padding);
 	background-blend-mode: hard-light;
 	background-image: url('./assets/svg/button.svg');
 }
@@ -554,8 +610,8 @@ button:active {
 }
 
 details > summary {
-	height: calc(0.25rem * 8.5);
-	width: calc(0.25rem * 111.5);
+	height: var(--height-details-summary);
+	width: var(--width-details-summary);
 	border-style: solid;
 	border-width: 2px;
 	padding-top: 1px;
@@ -568,13 +624,13 @@ details > summary {
 }
 
 details:open > p {
-	height: calc(0.25rem * 23.5);
-	width: calc(0.25rem * 111);
+	height: var(--height-details-p);
+	width: var(--width-details-p);
 	border-inline-style: solid;
 	border-inline-width: 2px;
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
-	padding-inline: calc(0.25rem * 0.5);
+	padding-inline: var(--text-padding);
 	padding-top: 1px;
 	text-align: center;
 
@@ -583,24 +639,25 @@ details:open > p {
 
 label > span,
 legend {
-	height: calc(0.25rem * 7.5);
-	padding-left: 0.25rem;
-	vertical-align: text-bottom;
+	margin-bottom: 2px;
+	padding-left: var(--text-padding);
 }
 
 /* classes */
 
 .alert {
 	display: flex;
-	min-height: calc(0.25rem * 33.5);
-	width: calc(0.25rem * 103);
+	/* responsive height by default */
+	min-height: var(--height-alert);
+	width: var(--width-alert);
 	align-content: center;
 	align-items: center;
 	justify-content: space-between;
-	gap: calc(0.25rem * 5.5);
+	/* gap between loading animation and alert content */
+	gap: 22px;
 	border-style: solid;
 	border-width: 16px;
-	padding-inline: calc(0.25rem * 5);
+	padding-inline: calc(var(--text-padding));
 	text-align: center;
 	color: var(--color-white);
 	& *::selection {
@@ -621,7 +678,7 @@ legend {
 }
 
 .bar {
-	height: calc(0.25rem * 8);
+	height: var(--height-bar);
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
 	background-blend-mode: hard-light;
@@ -630,7 +687,7 @@ legend {
 }
 
 .bar-lg {
-	height: calc(0.25rem * 11.5);
+	height: var(--height-bar-lg);
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
 	background-blend-mode: hard-light;
@@ -639,7 +696,7 @@ legend {
 }
 
 .bar-lg-reverse {
-	height: calc(0.25rem * 11.5);
+	height: var(--height-bar-lg);
 	border-top-style: solid;
 	border-top-width: 2px;
 	background-blend-mode: hard-light;
@@ -649,13 +706,13 @@ legend {
 }
 
 .button-lg {
-	width: calc(0.25rem * 55);
+	width: var(--width-button-lg);
 	background-image: url('./assets/svg/button_lg.svg');
 }
 
 .button-square {
-	width: calc(0.25rem * 9);
-	height: calc(0.25rem * 9);
+	width: var(--width-button-square);
+	height: var(--width-button-square);
 	background-image: url('./assets/svg/button_square.svg');
 }
 
@@ -706,33 +763,35 @@ button:active:not(:hover),
 
 .info {
 	display: flex;
-	height: calc(0.25rem * 24);
-	width: var(--container-lg);
-	gap: calc(0.25rem * 0.5);
+	height: var(--height-info);
+	/* width: 512px; */
+	gap: 2px;
 	border-top-style: solid;
 	border-top-width: 2px;
-	padding-block: calc(0.25rem * 0.5);
-	padding-left: 0.25rem;
+	padding-block: 2px;
+	/* 4px */
+	padding-left: var(--text-padding);
 	background-blend-mode: hard-light;
 
 	background-image: url('./assets/svg/info.svg');
 }
 
 .info-container {
-	height: calc(0.25rem * 22.5);
-	width: calc(0.25rem * 104);
+	height: var(--height-info-container);
+	width: var(--width-info-container);
 }
 
 .info-label {
-	height: calc(0.25rem * 6.5);
-	padding-right: 0.25rem;
-	padding-left: calc(0.25rem * 2);
+	height: var(--height-info-label);
+	padding-right: var(--text-padding);
+	padding-left: calc(var(--text-padding) * 2);
+	text-wrap-mode: nowrap;
 }
 
 .info-square {
 	display: grid;
-	width: calc(0.25rem * 22.5);
-	height: calc(0.25rem * 22.5);
+	width: var(--size-info-square);
+	height: var(--size-info-square);
 	place-items: center;
 	border-style: solid;
 	border-width: 2px;
@@ -742,38 +801,38 @@ button:active:not(:hover),
 }
 
 .info-text {
-	height: calc(0.25rem * 16);
+	height: var(--height-info-text);
 	border-style: solid;
 	border-width: 4px;
 	background-color: var(--color-ds-info-bg);
-	padding-inline: 0.25rem;
+	padding-inline: var(--text-padding);
 	color: var(--color-white);
 
 	border-image: url('./assets/svg/info_border.svg') 4;
 }
 
+/* todo: include this class in docs */
 .input-lg {
-	width: calc(0.25rem * 104.5);
+	min-width: var(--width-input-lg);
 }
 
 .input-wrapper {
 	display: flex;
 	align-items: center;
-	gap: calc(0.25rem * 0.5);
+	gap: 2px;
 }
 
 .input-before {
-	height: calc(0.25rem * 7.5);
-	width: calc(0.25rem * 7);
+	height: var(--height-input-bumper);
+	width: var(--width-input-bumper);
 	background-repeat: no-repeat;
 
 	background-image: url('./assets/svg/input_before.svg');
 }
 
 .input-after {
-	height: calc(0.25rem * 7.5);
-	width: calc(0.25rem * 7);
-
+	height: var(--height-input-bumper);
+	width: var(--width-input-bumper);
 	background-repeat: no-repeat;
 
 	background-image: url('./assets/svg/input_after.svg');
@@ -785,8 +844,8 @@ button:active:not(:hover),
 	flex-direction: column;
 	border-style: solid;
 	border-width: 8px;
-	gap: calc(0.25rem * 2);
-	/* TODO: leave optional? */
+	gap: 4px;
+	/* todo: leave optional? */
 	/* min-width: calc(0.25rem * 121); */
 
 	background: repeating-linear-gradient(
@@ -799,20 +858,22 @@ button:active:not(:hover),
 }
 
 .pictochat-window > div {
-	margin-inline: --calc(0.25rem * 0.5);
+	margin-inline: var(--text-padding);
 }
 
 .pictochat-message > header {
 	border-style: solid;
-	padding-inline: 0.5rem;
-	height: calc(0.25rem * 7);
-	min-width: calc(0.25rem * 29.5);
+	padding-inline: 8px;
+	height: var(--height-pictochat-header);
+	/* note: should this be allowed to grow? */
+	min-width: var(--width-pictochat-header);
 	background-blend-mode: lighten;
 
-	margin-bottom: calc(0.25rem * -1);
-	margin-left: calc(0.25rem * -2);
+	margin-bottom: calc(var(--text-padding) -1);
+	/* negative margin offsets text padding */
+	margin-left: calc(var(--text-padding) * -2);
 	display: inline-block;
-	translate: 0 calc(0.25rem * -1);
+	translate: 0 calc(-4px);
 	text-wrap: nowrap;
 
 	border-image-source: url('./assets/svg/pictochat_message_header_border.svg');
@@ -825,8 +886,8 @@ button:active:not(:hover),
 	border-style: solid;
 	border-width: 8px;
 	background-color: white;
-	padding-inline: 0.25rem;
-	width: calc(0.25rem * 117);
+	padding-inline: var(--text-padding);
+	width: var(--width-pictochat);
 
 	border-image: url('./assets/svg/pictochat_message_border.svg') 8;
 
@@ -847,16 +908,16 @@ button:active:not(:hover),
 	border-width: 8px;
 	background-color: black;
 	color: white;
-	padding-inline: 0.25rem;
-	width: calc(0.25rem * 117);
+	padding-inline: var(--text-padding);
+	width: var(--width-pictochat);
 
 	border-image: url('./assets/svg/pictochat_status.svg') 8;
 }
 
 .radio-button {
 	position: relative;
-	height: calc(0.25rem * 15.5);
-	width: calc(0.25rem * 48);
+	height: var(--height-button-radio);
+	width: var(--width-button-radio);
 	background-clip: border-box;
 }
 
