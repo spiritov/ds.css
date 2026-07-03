@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> pre npm v2.0.0 will have broken styles without using Tailwind's preflight styles. a slightly stripped down version is included with v2.0.0
+
 <img width="754" height="256" alt="image" src="https://github.com/user-attachments/assets/4a397b7c-69ea-4ef8-894e-459da7d0369c" />
 
 # ds.css
