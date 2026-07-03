@@ -566,8 +566,10 @@ input[type='radio']:checked {
 }
 
 button {
-  /* font-family: var(--font-system); */
-  /* font-size: medium; */
+  /* "preload" button hold svg */
+  @starting-style {
+    background-image: url('./assets/svg/button_active.svg');
+  }
   height: var(--width-button-square);
   width: var(--width-button);
   cursor: pointer;
