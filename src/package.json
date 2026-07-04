@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "cp -r ./assets/* ./dist/assets && cp ./ds.css ./dist && cp ./preflight.css ./dist"
+    "build": "cp -r ./assets/* ../dist/assets && cp ./ds.css ../dist"
   },
   "name": "@spiritov/ds.css",
   "version": "2.0.1",
@@ -16,10 +16,9 @@
   },
   "keywords": [
     "css",
-    "ui",
-    "ds",
     "ds lite",
-    "design system",
+    "ds",
+    "ui",
     "ui framework",
     "ui library"
   ],

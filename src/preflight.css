@@ -8,23 +8,6 @@
 }
 
 /*
-  1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-  2. Remove default margins and padding
-  3. Reset all borders.
-*/
-
-*,
-::after,
-::before,
-::backdrop,
-::file-selector-button {
-  box-sizing: border-box; /* 1 */
-  margin: 0; /* 2 */
-  padding: 0; /* 2 */
-  border: 0 solid; /* 3 */
-}
-
-/*
   1. Use a consistent sensible line-height in all browsers.
   2. Prevent adjustments of font size after orientation changes in iOS.
   3. Use a more readable tab size.
@@ -34,7 +17,7 @@
 
 html,
 :host {
-  line-height: 1.5; /* 1 */
+  line-height: 1; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   tab-size: 4; /* 3 */
   font-family: var(--font-system); /* 4 */
@@ -104,17 +87,9 @@ code,
 kbd,
 samp,
 pre {
-  font-family: var(
-    --font-system,
-    ui-monospace,
-    SFMono-Regular,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Liberation Mono',
-    'Courier New',
-    monospace
-  ); /* 1 */
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
