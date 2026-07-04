@@ -3,7 +3,7 @@
     "build": "cp -r ./src/assets/* ./dist/assets && cp ./src/ds.css ./dist"
   },
   "name": "@spiritov/ds.css",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A css framework recreating the DS Lite's UI",
   "main": "./dist/ds.css",
   "files": [
