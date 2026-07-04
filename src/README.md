@@ -1,4 +1,4 @@
-pre npm v2.1.0 may have broken styles without using Tailwind's preflight styles. a small preflight is included with v2.1.0
+pre npm v2.2.0 may have broken styles without using Tailwind's preflight styles. a small preflight is included with v2.2.0
 
 <img width="623" height="253" alt="image" src="https://github.com/user-attachments/assets/6abc39b7-ddaf-4b98-96d3-09ec56bbba18" />
 

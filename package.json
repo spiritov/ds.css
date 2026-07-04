@@ -1,13 +1,13 @@
 {
   "scripts": {
-    "build": "cp -r ./assets/* ../dist/assets && cp ./ds.css ../dist"
+    "build": "cp -r ./src/assets/* ./dist/assets && cp ./src/ds.css ./dist"
   },
   "name": "@spiritov/ds.css",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "A css framework recreating the DS Lite's UI",
-  "main": "dist/ds.css",
+  "main": "./dist/ds.css",
   "files": [
-    "dist"
+    "./dist"
   ],
   "devDependencies": {},
   "repository": {
