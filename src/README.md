@@ -1,3 +1,5 @@
+pre npm v2.1.0 may have broken styles without using Tailwind's preflight styles. a small preflight is included with v2.1.0
+
 <img width="623" height="253" alt="image" src="https://github.com/user-attachments/assets/6abc39b7-ddaf-4b98-96d3-09ec56bbba18" />
 
 # ds.css
@@ -11,7 +13,7 @@ the fastest way to use it is to import from unpkg
 <link rel="stylesheet" href="https://unpkg.com/@spiritov/ds.css" />
 ```
 
-if you'd rather download it, you can do by copying the contents of `/dist`
+if you'd rather download it, you can do so by copying the contents of `/dist`
 
 ```html
 <link href="./ds.css" rel="stylesheet" />
