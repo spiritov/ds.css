@@ -23,10 +23,39 @@ or, install with npm
 npm i @spiritov/ds.css
 ```
 
+## using widgets (web components)
+
+included web components can also be imported from unpkg. for example, to import the calendar..
+
+```html
+<!-- in your html's <head> -->
+<script type="module" src="https://unpkg.com/@spiritov/ds.css/dist/widgets/ds-calendar.js" />
+
+<!-- in your html -->
+<ds-calendar></ds-calendar>
+```
+
+you can also download and import them manually
+```html
+<script type="module" src="./widgets/ds-calendar.js" />
+```
+
+
+or, install with npm for use in a web framework. with Svelte, this could look like
+```html
+<script>
+  import { onMount } from 'svelte';
+  onMount(async () => {
+    await import("@spiritov/ds.css/dist/widgets/ds-calendar.js");
+  });
+</script>
+
+<ds-calendar></ds-calendar>
+```
+
 ## todo
 
 - provide a way to use ds.css nested / scoped within a page
-- clock (with optional js, [like here](https://ds.dreamyard.xyz/))
-- calendar (with optional js, [like here](https://ds.dreamyard.xyz/))
+- clock web component ([like here](https://ds.dreamyard.xyz/))
 - more pictochat components(?)
 - extra ds-inspired components(?)
