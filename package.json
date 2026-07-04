@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "cp -r ./src/assets/* ./dist/assets && cp ./src/ds.css ./dist"
+    "build": "cp -r ./src/assets/* ./dist/assets && cp ./src/ds.css ./dist && cp ./README.md ./src"
   },
   "name": "@spiritov/ds.css",
   "version": "2.2.0",

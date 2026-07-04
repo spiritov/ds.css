@@ -11,7 +11,7 @@ the fastest way to use it is to import from unpkg
 <link rel="stylesheet" href="https://unpkg.com/@spiritov/ds.css" />
 ```
 
-if you'd rather download it or want to stay on a specific version, you can do so by copying the contents of `/dist`
+if you'd rather download it, or want to stay on a specific version, you can do so by copying the contents of `/dist`
 
 ```html
 <link href="./ds.css" rel="stylesheet" />
