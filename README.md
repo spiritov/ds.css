@@ -54,7 +54,7 @@ or, install with npm for use in a web framework. with Svelte, this could look li
 ```
 
 ## todo
-
+- optimize svgs / replace more with gradients / use images (svgs total 3.3mb, and are generated 1x1 rectangles, run through [svgo](https://github.com/svg/svgo))
 - provide a way to use ds.css nested / scoped within a page
 - clock web component ([like here](https://ds.dreamyard.xyz/))
 - more pictochat components(?)
