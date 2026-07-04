@@ -11,16 +11,10 @@ the fastest way to use it is to import from unpkg
 <link rel="stylesheet" href="https://unpkg.com/@spiritov/ds.css" />
 ```
 
-to use it, you can copy and use the contents of `/dist`, then include it in your html's `<head>`
+if you'd rather download it, you can do by copying the contents of `/dist`
 
 ```html
 <link href="./ds.css" rel="stylesheet" />
-```
-
-if you'd rather download it, you can do so from the `/dist` package.
-
-```
-<link rel="stylesheet" href="https://unpkg.com/98.css" />
 ```
 
 or, install with npm
