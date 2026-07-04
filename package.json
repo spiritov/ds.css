@@ -1,18 +1,13 @@
 {
   "scripts": {
-    "tw": "npx @tailwindcss/cli -i ./src/ds.css -o ./src/output.css --watch",
-    "sync": "browser-sync start --server --files '.src/ds.html, .src/test.html, .src/landing.html, ./src/output.css'"
-  },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.3.1",
-    "tailwindcss": "^4.3.1"
+    "build": "cp -r ./src/assets/* ./dist/assets && cp ./src/ds.css ./dist && cp ./README.md ./src"
   },
   "name": "@spiritov/ds.css",
-  "version": "1.0.1",
+  "version": "2.2.0",
   "description": "A css framework recreating the DS Lite's UI",
-  "main": "../dist/ds.css",
+  "main": "./dist/ds.css",
   "files": [
-    "../dist"
+    "./dist"
   ],
   "devDependencies": {},
   "repository": {
@@ -21,10 +16,9 @@
   },
   "keywords": [
     "css",
-    "ui",
-    "ds",
     "ds lite",
-    "design system",
+    "ds",
+    "ui",
     "ui framework",
     "ui library"
   ],
