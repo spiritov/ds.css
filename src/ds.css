@@ -98,6 +98,7 @@ Add the correct display in Chrome and Safari.
     --color-ds-darkgrey: #494949;
     --color-ds-button-default: #808080;
     --color-ds-info-bg: #282828;
+    --color-ds-details-p-border: #a2a2a2;
 
     --color-ds-text-focus: #e36100;
     --color-ds-loading: #fbd300;
@@ -167,6 +168,7 @@ Add the correct display in Chrome and Safari.
     font-size: 17px;
     line-height: 26px;
     text-rendering: geometricPrecision;
+    image-rendering: pixelated;
 
     /* background color classes */
     /* ds theme colors */
@@ -367,7 +369,6 @@ Add the correct display in Chrome and Safari.
   }
 
   /* 4 cuts */
-  .pictochat-window > p,
   .pictochat-window,
   .pictochat-message,
   .pictochat-status,
@@ -637,7 +638,7 @@ Add the correct display in Chrome and Safari.
       background-color: var(--color-ds-text-focus);
     }
 
-    background: url('./assets/svg/input.svg') -1px;
+    background: url('./assets/images/input.png') -1px;
   }
 
   input[type='radio'] {
@@ -647,7 +648,7 @@ Add the correct display in Chrome and Safari.
     border-style: solid;
     border-width: 2px;
     border-color: var(--color-ds-darkgrey);
-    background-image: url('./assets/svg/button_radio.svg');
+    background-image: url('./assets/images/button_radio.png');
   }
 
   input[type='radio']:checked {
@@ -658,7 +659,7 @@ Add the correct display in Chrome and Safari.
     background-color: var(--color-ds-button-default);
     /* "preload" button hold svg */
     @starting-style {
-      background-image: url('./assets/svg/button_active.svg');
+      background-image: url('./assets/images/button_active.png');
     }
     height: var(--width-button-square);
     width: var(--width-button);
@@ -666,7 +667,7 @@ Add the correct display in Chrome and Safari.
     border-color: var(--color-ds-darkgrey);
     padding-inline: var(--text-padding);
     background-blend-mode: hard-light;
-    background-image: url('./assets/svg/button.svg');
+    background-image: url('./assets/images/button.png');
   }
 
   label {
@@ -677,7 +678,7 @@ Add the correct display in Chrome and Safari.
   }
 
   button:active {
-    background-image: url('./assets/svg/button_active.svg');
+    background-image: url('./assets/images/button_active.png');
   }
 
   details > summary {
@@ -693,10 +694,10 @@ Add the correct display in Chrome and Safari.
     /* todo: use inset border and repeating gradient for details p */
     /* "preload" details open svg */
     @starting-style {
-      background-image: url('./assets/svg/details.svg');
+      background-image: url('./assets/images/details.png');
     }
 
-    background-image: url('./assets/svg/details_head.svg');
+    background-image: url('./assets/images/details_head.png');
     list-style: none;
   }
 
@@ -712,8 +713,19 @@ Add the correct display in Chrome and Safari.
     padding-inline: calc(var(--text-padding) * 2);
     padding-top: 1px;
     text-align: center;
+    /* alternative to bg image, not perfect */
+    /* box-shadow:
+      inset 0 0 0 2px white,
+      inset 0 0px 0 4px var(--color-ds-details-p-border); */
 
-    background-image: url('./assets/svg/details.svg');
+    background-image:
+      url('./assets/images/details.png'),
+      repeating-linear-gradient(
+        white,
+        white 2px,
+        var(--color-ds-grid-bg) 2px,
+        var(--color-ds-grid-bg) 4px
+      );
   }
 
   label > span,
@@ -746,7 +758,7 @@ Add the correct display in Chrome and Safari.
       background-color: var(--color-ds-text-focus);
     }
 
-    border-image: url('./assets/svg/alert_border.svg') 15;
+    border-image: url('./assets/images/alert_border.svg') 15;
     background: repeating-linear-gradient(
       black,
       black 2px,
@@ -762,7 +774,7 @@ Add the correct display in Chrome and Safari.
     border-bottom-width: 2px;
     background-blend-mode: hard-light;
 
-    background-image: url('./assets/svg/top_bar.svg');
+    background-image: url('./assets/images/top_bar.png');
   }
 
   .bar-lg {
@@ -771,7 +783,7 @@ Add the correct display in Chrome and Safari.
     border-bottom-width: 2px;
     background-blend-mode: hard-light;
 
-    background-image: url('./assets/svg/bottom_bar_top.svg');
+    background-image: url('./assets/images/bottom_bar_top.png');
   }
 
   .bar-lg-reverse {
@@ -780,27 +792,27 @@ Add the correct display in Chrome and Safari.
     border-top-width: 2px;
     background-blend-mode: hard-light;
 
-    background-image: url('./assets/svg/bottom_bar_bottom.svg');
+    background-image: url('./assets/images/bottom_bar_bottom.png');
     background-position-y: -2px;
   }
 
   .button-lg {
     width: var(--width-button-lg);
-    background-image: url('./assets/svg/button_lg.svg');
+    background-image: url('./assets/images/button_lg.png');
   }
 
   .button-square {
     width: var(--width-button-square);
     height: var(--width-button-square);
-    background-image: url('./assets/svg/button_square.svg');
+    background-image: url('./assets/images/button_square.png');
   }
 
   .button-square:active {
-    background-image: url('./assets/svg/button_square_active.svg');
+    background-image: url('./assets/images/button_square_active.png');
   }
 
   .button-lg:active {
-    background-image: url('./assets/svg/button_lg_active.svg');
+    background-image: url('./assets/images/button_lg_active.png');
   }
 
   button:active:not(:hover),
@@ -833,7 +845,7 @@ Add the correct display in Chrome and Safari.
   }
 
   .ds-grid-lg {
-    background-image: url('./assets/svg/grid_lg.svg');
+    background-image: url('./assets/images/grid_lg.png');
   }
 
   .info {
@@ -848,7 +860,7 @@ Add the correct display in Chrome and Safari.
     padding-left: var(--text-padding);
     background-blend-mode: hard-light;
 
-    background-image: url('./assets/svg/info.svg');
+    background-image: url('./assets/images/info.png');
   }
 
   .info-container {
@@ -872,7 +884,7 @@ Add the correct display in Chrome and Safari.
     border-width: 2px;
     background-blend-mode: hard-light;
 
-    background-image: url('./assets/svg/info_square.svg');
+    background-image: url('./assets/images/info_square.png');
   }
 
   .info-text {
@@ -883,7 +895,7 @@ Add the correct display in Chrome and Safari.
     padding-inline: var(--text-padding);
     color: white;
 
-    border-image: url('./assets/svg/info_border.svg') 4;
+    border-image: url('./assets/images/info_border.svg') 4;
   }
 
   /* todo: include this class in docs */
@@ -902,7 +914,7 @@ Add the correct display in Chrome and Safari.
     width: var(--width-input-bumper);
     background-repeat: no-repeat;
 
-    background-image: url('./assets/svg/input_before.svg');
+    background-image: url('./assets/images/input_before.png');
   }
 
   .input-after {
@@ -910,7 +922,7 @@ Add the correct display in Chrome and Safari.
     width: var(--width-input-bumper);
     background-repeat: no-repeat;
 
-    background-image: url('./assets/svg/input_after.svg');
+    background-image: url('./assets/images/input_after.png');
   }
 
   /* todo: include extra line at top? */
@@ -929,7 +941,7 @@ Add the correct display in Chrome and Safari.
       var(--color-ds-pictochat-border) 6px,
       var(--color-ds-pictochat-border) 8px
     );
-    border-image: url('./assets/svg/pictochat_border.svg') 8;
+    border-image: url('./assets/images/pictochat_border.svg') 8;
   }
 
   .pictochat-window > div {
@@ -952,7 +964,7 @@ Add the correct display in Chrome and Safari.
     text-wrap: nowrap;
     align-content: end;
 
-    border-image-source: url('./assets/svg/pictochat_message_header_border.svg');
+    border-image-source: url('./assets/images/pictochat_message_header_border.svg');
     border-image-slice: 4;
     border-width: 0px 4px 4px 0px;
   }
@@ -965,7 +977,7 @@ Add the correct display in Chrome and Safari.
     padding-inline: var(--text-padding);
     width: var(--width-pictochat);
 
-    border-image: url('./assets/svg/pictochat_message_border.svg') 8;
+    border-image: url('./assets/images/pictochat_message_border.svg') 8;
 
     background-size: cover;
     background-position: top;
@@ -987,7 +999,7 @@ Add the correct display in Chrome and Safari.
     padding-inline: var(--text-padding);
     width: var(--width-pictochat);
 
-    border-image: url('./assets/svg/pictochat_status.svg') 8;
+    border-image: url('./assets/images/pictochat_status.svg') 8;
   }
 
   .pictochat-enter-highlight {
