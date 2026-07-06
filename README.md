@@ -11,7 +11,7 @@ the fastest way to use it is to import from unpkg
 <link rel="stylesheet" href="https://unpkg.com/@spiritov/ds.css" />
 ```
 
-if you'd rather download it, or want to stay on a specific version, you can do so by copying the contents of `/dist`
+if you'd rather download it, you can do so by copying the contents of `/dist`
 
 ```html
 <link href="./ds.css" rel="stylesheet" />
@@ -36,17 +36,18 @@ included web components can also be imported from unpkg. for example, to import 
 ```
 
 you can also download and import them manually
+
 ```html
 <script type="module" src="./widgets/ds-calendar.js" />
 ```
 
-
 or, install with npm for use in a web framework. with Svelte, this could look like
+
 ```html
 <script>
   import { onMount } from 'svelte';
   onMount(async () => {
-    await import("@spiritov/ds.css/dist/widgets/ds-calendar.js");
+    await import('@spiritov/ds.css/dist/widgets/ds-calendar.js');
   });
 </script>
 
@@ -54,7 +55,7 @@ or, install with npm for use in a web framework. with Svelte, this could look li
 ```
 
 ## todo
-- optimize svgs / replace more with gradients / use images (svgs total 3.3mb, and are generated 1x1 rectangles, run through [svgo](https://github.com/svg/svgo))
+
 - provide a way to use ds.css nested / scoped within a page
 - clock web component ([like here](https://ds.dreamyard.xyz/))
 - more pictochat components(?)
