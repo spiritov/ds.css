@@ -1,15 +1,18 @@
 {
   "scripts": {
-    "build": "cp -r ./src/assets/* ./dist/assets && cp ./src/ds.css ./dist && cp ./src/widgets/ds-calendar.js ./dist/widgets"
+    "build:npm": "cp -r ./src/assets/* ./dist/assets && cp ./src/widgets/* ./dist/widgets && cp ./src/ds.css ./src/ds-scoped.css ./dist",
+    "build:ds": "postcss ./src/dev.css --config ./postcss/default -o ./src/ds.css",
+    "build:ds-scoped": "postcss ./src/dev.css --config ./postcss/prefix -o ./src/ds-scoped.css",
+    "build": "npm run build:ds && npm run build:ds-scoped && npm run build:npm"
   },
   "name": "@spiritov/ds.css",
   "version": "2.3.0",
   "description": "A css framework recreating the DS Lite's UI",
+  "type": "module",
   "main": "./dist/ds.css",
   "files": [
     "./dist"
   ],
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spiritov/ds.css.git"
@@ -27,5 +30,11 @@
   "bugs": {
     "url": "https://github.com/spiritov/ds.css/issues"
   },
-  "homepage": "https://github.com/spiritov/ds.css#readme"
+  "homepage": "https://github.com/spiritov/ds.css#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.5.2",
+    "postcss": "^8.5.16",
+    "postcss-cli": "^11.0.1",
+    "postcss-prefixwrap": "1.58.0"
+  }
 }

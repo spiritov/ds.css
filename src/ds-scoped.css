@@ -18,32 +18,27 @@ loading   - loading animation
   /**
   Use a better box model (opinionated). Box sizing should not be inherited. (https://www.oddbird.net/2025/09/04/box-model/)
   */
-  *,
-  ::before,
-  ::after {
+  .ds-css *, .ds-css ::before, .ds-css ::after {
     box-sizing: border-box;
   }
 
   /**
   Correct the inability to style clickable types in iOS and Safari.
   */
-  button,
-  [type='button'],
-  [type='reset'],
-  [type='submit'] {
+  .ds-css button, .ds-css [type='button'], .ds-css [type='reset'], .ds-css [type='submit'] {
     -webkit-appearance: button;
   }
 
   /*
   Add the correct display in Chrome and Safari.
   */
-  summary {
+  .ds-css summary {
     display: list-item;
   }
 }
 
 @layer base {
-  html {
+  .ds-css {
     /* font */
     --font-system: 'ds-system', 'system-ui';
 
@@ -107,7 +102,7 @@ loading   - loading animation
     --height-details-p: 94px;
     --height-bar: 32px;
     --height-bar-lg: 46px;
-    /* opininated, matches smaller text (exact 36px) */
+    /* exact is 36px */
     --height-pictochat-header: 34px;
     --height-info: 96px;
     --height-info-container: 90px;
@@ -120,7 +115,6 @@ loading   - loading animation
 
     /* global styles */
     font-family: var(--font-system), 'Segoe UI', system-ui, Roboto, Helvetica, Arial;
-    /* opinionated, slightly smaller than exact */
     font-size: 17px;
     line-height: 26px;
     text-rendering: geometricPrecision;
@@ -238,7 +232,7 @@ loading   - loading animation
 
 @layer clip-path {
   /* 1 cut */
-  button {
+  .ds-css button {
     clip-path: polygon(
       2px 100%,
       2px calc(100% - 2px),
@@ -256,7 +250,7 @@ loading   - loading animation
   }
 
   /* 5 cuts */
-  .alert {
+  .ds-css .alert {
     clip-path: polygon(
       /* bottom left */ 10px 100%,
       10px calc(100% - 2px),
@@ -306,7 +300,7 @@ loading   - loading animation
   }
 
   /* 2 cuts */
-  .info-text {
+  .ds-css .info-text {
     clip-path: polygon(
       /* bottom left */ 4px 100%,
       4px calc(100% - 2px),
@@ -332,10 +326,7 @@ loading   - loading animation
   }
 
   /* 4 cuts */
-  .pictochat-window,
-  .pictochat-message,
-  .pictochat-status,
-  .pictochat-board {
+  .ds-css .pictochat-window, .ds-css .pictochat-message, .ds-css .pictochat-status, .ds-css .pictochat-board {
     clip-path: polygon(
       /* bottom left */ 8px 100%,
       8px calc(100% - 2px),
@@ -377,7 +368,7 @@ loading   - loading animation
   }
 
   /* 3 cuts, only TL / BR */
-  .pictochat-message > header {
+  .ds-css .pictochat-message > header {
     clip-path: polygon(
       /* bottom left */ 0px 100%,
       /* top left */ 0 4px,
@@ -396,7 +387,7 @@ loading   - loading animation
 }
 
 @layer loading {
-  .loading-container {
+  .ds-css .loading-container {
     display: grid;
     width: -moz-fit-content;
     width: fit-content;
@@ -407,160 +398,138 @@ loading   - loading animation
     gap: 2px;
   }
 
-  .loading-container > div {
+  .ds-css .loading-container > div {
     background-color: var(--color-ds-loading);
     width: 6px;
     height: 6px;
   }
 
   @keyframes loading-1 {
-    12.5%,
-    37.5% {
+    12.5%, 37.5% {
       opacity: 1;
     }
-    37.51%,
-    75% {
+    37.51%, 75% {
       opacity: 0;
     }
-    75.01%,
-    100% {
+    75.01%, 100% {
       opacity: 1;
     }
   }
 
   @keyframes loading-2 {
-    0%,
-    50% {
+    0%, 50% {
       opacity: 1;
     }
-    50.01%,
-    87.5% {
+    50.01%, 87.5% {
       opacity: 0;
     }
-    87.51%,
-    100% {
+    87.51%, 100% {
       opacity: 1;
     }
   }
 
   @keyframes loading-3 {
-    0%,
-    62.5% {
+    0%, 62.5% {
       opacity: 1;
     }
-    62.51%,
-    100% {
+    62.51%, 100% {
       opacity: 0;
     }
   }
 
   @keyframes loading-6 {
-    0%,
-    12.5% {
+    0%, 12.5% {
       opacity: 0;
     }
-    12.51%,
-    75% {
+    12.51%, 75% {
       opacity: 1;
     }
-    75.01%,
-    100% {
+    75.01%, 100% {
       opacity: 0;
     }
   }
 
   @keyframes loading-9 {
-    0%,
-    25% {
+    0%, 25% {
       opacity: 0;
     }
-    25.51%,
-    87.5% {
+    25.51%, 87.5% {
       opacity: 1;
     }
-    87.51%,
-    100% {
+    87.51%, 100% {
       opacity: 0;
     }
   }
 
   @keyframes loading-8 {
-    0%,
-    37.5% {
+    0%, 37.5% {
       opacity: 0;
     }
-    37.51%,
-    100% {
+    37.51%, 100% {
       opacity: 1;
     }
   }
 
   @keyframes loading-7 {
-    0%,
-    12.5% {
+    0%, 12.5% {
       opacity: 1;
     }
-    12.51%,
-    50% {
+    12.51%, 50% {
       opacity: 0;
     }
-    50.01%,
-    100% {
+    50.01%, 100% {
       opacity: 1;
     }
   }
 
   @keyframes loading-4 {
-    0%,
-    25% {
+    0%, 25% {
       opacity: 1;
     }
-    25.01%,
-    62.5% {
+    25.01%, 62.5% {
       opacity: 0;
     }
-    62.51%,
-    100% {
+    62.51%, 100% {
       opacity: 1;
     }
   }
 
-  .loading-1 {
+  .ds-css .loading-1 {
     animation: 533.33ms infinite loading-1;
   }
 
-  .loading-2 {
+  .ds-css .loading-2 {
     animation: 533.33ms infinite loading-2;
   }
 
-  .loading-3 {
+  .ds-css .loading-3 {
     animation: 533.33ms infinite loading-3;
   }
 
-  .loading-4 {
+  .ds-css .loading-4 {
     animation: 533.33ms infinite loading-4;
   }
 
-  .loading-6 {
+  .ds-css .loading-6 {
     animation: 533.33ms infinite loading-6;
   }
 
-  .loading-7 {
+  .ds-css .loading-7 {
     animation: 533.33ms infinite loading-7;
   }
 
-  .loading-8 {
+  .ds-css .loading-8 {
     animation: 533.33ms infinite loading-8;
   }
 
-  .loading-9 {
+  .ds-css .loading-9 {
     animation: 533.33ms infinite loading-9;
   }
 }
 
 @layer ds {
   /* link styling */
-  a:link {
+  .ds-css a:link {
     color: var(--color-ds-blue);
     text-decoration-line: underline;
 
@@ -568,38 +537,36 @@ loading   - loading animation
     text-underline-offset: 3px;
   }
 
-  a:visited {
+  .ds-css a:visited {
     color: var(--color-ds-darkpurple);
   }
 
-  a:hover {
+  .ds-css a:hover {
     text-decoration: none;
   }
 
-  a:-moz-any-link > button {
+  .ds-css a:-moz-any-link > button {
     color: black;
   }
 
-  a:any-link > button {
+  .ds-css a:any-link > button {
     color: black;
   }
 
-  button,
-  input {
+  .ds-css button, .ds-css input {
     font-family: inherit;
     font-size: 100%;
     margin: 0;
   }
 
   /* input & buttons */
-  button,
-  input[type='text'] {
+  .ds-css button, .ds-css input[type='text'] {
     border-style: solid;
     border-width: 2px;
     text-wrap: nowrap;
   }
 
-  input[type='text'] {
+  .ds-css input[type='text'] {
     height: var(--height-input);
     width: var(--width-input);
     /* 6px */
@@ -623,23 +590,23 @@ loading   - loading animation
     background: url('./assets/images/input.png') -1px;
   }
 
-  input[type='radio'] {
+  .ds-css input[type='radio'] {
     height: var(--height-button-radio);
     width: var(--width-button-radio);
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     border-style: solid;
     border-width: 2px;
     border-color: var(--color-ds-darkgrey);
     background-image: url('./assets/images/button_radio.png');
   }
 
-  input[type='radio']:checked {
+  .ds-css input[type='radio']:checked {
     background-blend-mode: hard-light;
   }
 
-  button {
+  .ds-css button {
     background-color: var(--color-ds-button-default);
     /* "preload" button hold svg */
     @starting-style {
@@ -654,19 +621,19 @@ loading   - loading animation
     background-image: url('./assets/images/button.png');
   }
 
-  label {
+  .ds-css label {
     display: flex;
     flex-direction: column;
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
+         user-select: none;
   }
 
-  button:active {
+  .ds-css button:active {
     background-image: url('./assets/images/button_active.png');
   }
 
-  details > summary {
+  .ds-css details > summary {
     height: var(--height-details-summary);
     width: var(--width-details-summary);
     border-style: solid;
@@ -675,7 +642,7 @@ loading   - loading animation
     text-align: center;
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
+         user-select: none;
 
     /* todo: use inset border and repeating gradient for details p */
     /* "preload" details open svg */
@@ -687,7 +654,7 @@ loading   - loading animation
     list-style: none;
   }
 
-  details:open > p {
+  .ds-css details:open > p {
     margin: 0px;
     height: var(--height-details-p);
     width: var(--width-details-p);
@@ -714,15 +681,14 @@ loading   - loading animation
       );
   }
 
-  label > span,
-  legend {
+  .ds-css label > span, .ds-css legend {
     margin-bottom: 2px;
     padding-left: var(--text-padding);
   }
 
   /* classes */
 
-  .alert {
+  .ds-css .alert {
     display: flex;
     /* responsive height by default */
     min-height: var(--height-alert);
@@ -752,7 +718,7 @@ loading   - loading animation
 
     -o-border-image: url('./assets/images/alert_border.svg') 15;
 
-    border-image: url('./assets/images/alert_border.svg') 15;
+       border-image: url('./assets/images/alert_border.svg') 15;
     background: repeating-linear-gradient(
       black,
       black 2px,
@@ -762,7 +728,7 @@ loading   - loading animation
     background-size: 100% 4px;
   }
 
-  .bar {
+  .ds-css .bar {
     height: var(--height-bar);
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -771,7 +737,7 @@ loading   - loading animation
     background-image: url('./assets/images/top_bar.png');
   }
 
-  .bar-lg {
+  .ds-css .bar-lg {
     height: var(--height-bar-lg);
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -780,7 +746,7 @@ loading   - loading animation
     background-image: url('./assets/images/bottom_bar_top.png');
   }
 
-  .bar-lg-reverse {
+  .ds-css .bar-lg-reverse {
     height: var(--height-bar-lg);
     border-top-style: solid;
     border-top-width: 2px;
@@ -790,32 +756,30 @@ loading   - loading animation
     background-position-y: -2px;
   }
 
-  .button-lg {
+  .ds-css .button-lg {
     width: var(--width-button-lg);
     background-image: url('./assets/images/button_lg.png');
   }
 
-  .button-square {
+  .ds-css .button-square {
     width: var(--width-button-square);
     height: var(--width-button-square);
     background-image: url('./assets/images/button_square.png');
   }
 
-  .button-square:active {
+  .ds-css .button-square:active {
     background-image: url('./assets/images/button_square_active.png');
   }
 
-  .button-lg:active {
+  .ds-css .button-lg:active {
     background-image: url('./assets/images/button_lg_active.png');
   }
 
-  button:active:not(:hover),
-  .button-lg:active:not(:hover),
-  .button-square:active:not(:hover) {
+  .ds-css button:active:not(:hover), .ds-css .button-lg:active:not(:hover), .ds-css .button-square:active:not(:hover) {
     background-blend-mode: normal;
   }
 
-  .ds-grid {
+  .ds-css .ds-grid {
     background:
       repeating-linear-gradient(
         transparent,
@@ -838,11 +802,11 @@ loading   - loading animation
       );
   }
 
-  .ds-grid-lg {
+  .ds-css .ds-grid-lg {
     background-image: url('./assets/images/grid_lg.png');
   }
 
-  .info {
+  .ds-css .info {
     display: flex;
     height: var(--height-info);
     /* width: 512px; */
@@ -857,19 +821,19 @@ loading   - loading animation
     background-image: url('./assets/images/info.png');
   }
 
-  .info-container {
+  .ds-css .info-container {
     height: var(--height-info-container);
     width: var(--width-info-container);
   }
 
-  .info-label {
+  .ds-css .info-label {
     height: var(--height-info-label);
     padding-right: var(--text-padding);
     padding-left: calc(var(--text-padding) * 2);
     text-wrap-mode: nowrap;
   }
 
-  .info-square {
+  .ds-css .info-square {
     display: grid;
     width: var(--size-info-square);
     height: var(--size-info-square);
@@ -881,7 +845,7 @@ loading   - loading animation
     background-image: url('./assets/images/info_square.png');
   }
 
-  .info-text {
+  .ds-css .info-text {
     height: var(--height-info-text);
     border-style: solid;
     border-width: 4px;
@@ -891,21 +855,21 @@ loading   - loading animation
 
     -o-border-image: url('./assets/images/info_border.svg') 4;
 
-    border-image: url('./assets/images/info_border.svg') 4;
+       border-image: url('./assets/images/info_border.svg') 4;
   }
 
   /* todo: include this class in docs */
-  .input-lg {
+  .ds-css .input-lg {
     min-width: var(--width-input-lg);
   }
 
-  .input-wrapper {
+  .ds-css .input-wrapper {
     display: flex;
     align-items: center;
     gap: 2px;
   }
 
-  .input-before {
+  .ds-css .input-before {
     height: var(--height-input-bumper);
     width: var(--width-input-bumper);
     background-repeat: no-repeat;
@@ -913,7 +877,7 @@ loading   - loading animation
     background-image: url('./assets/images/input_before.png');
   }
 
-  .input-after {
+  .ds-css .input-after {
     height: var(--height-input-bumper);
     width: var(--width-input-bumper);
     background-repeat: no-repeat;
@@ -922,7 +886,7 @@ loading   - loading animation
   }
 
   /* todo: include extra line at top? */
-  .pictochat-window {
+  .ds-css .pictochat-window {
     display: flex;
     flex-direction: column;
     border-style: solid;
@@ -938,14 +902,14 @@ loading   - loading animation
       var(--color-ds-pictochat-border) 8px
     );
     -o-border-image: url('./assets/images/pictochat_border.svg') 8;
-    border-image: url('./assets/images/pictochat_border.svg') 8;
+       border-image: url('./assets/images/pictochat_border.svg') 8;
   }
 
-  .pictochat-window > div {
+  .ds-css .pictochat-window > div {
     margin-inline: var(--text-padding);
   }
 
-  .pictochat-message > header {
+  .ds-css .pictochat-message > header {
     border-style: solid;
     padding-inline: 8px;
     height: var(--height-pictochat-header);
@@ -966,7 +930,7 @@ loading   - loading animation
     border-width: 0px 4px 4px 0px;
   }
 
-  .pictochat-message {
+  .ds-css .pictochat-message {
     position: relative;
     border-style: solid;
     border-width: 8px;
@@ -976,7 +940,7 @@ loading   - loading animation
 
     -o-border-image: url('./assets/images/pictochat_message_border.svg') 8;
 
-    border-image: url('./assets/images/pictochat_message_border.svg') 8;
+       border-image: url('./assets/images/pictochat_message_border.svg') 8;
 
     background-size: cover;
     background-position: top;
@@ -985,12 +949,11 @@ loading   - loading animation
   }
 
   /* shrink nested pictochat messages */
-  .pictochat-message > .pictochat-message,
-  .pictochat-message > .pictochat-status {
+  .ds-css .pictochat-message > .pictochat-message, .ds-css .pictochat-message > .pictochat-status {
     width: 100%;
   }
 
-  .pictochat-status {
+  .ds-css .pictochat-status {
     border-style: solid;
     border-width: 8px;
     background-color: black;
@@ -1000,10 +963,10 @@ loading   - loading animation
 
     -o-border-image: url('./assets/images/pictochat_status.svg') 8;
 
-    border-image: url('./assets/images/pictochat_status.svg') 8;
+       border-image: url('./assets/images/pictochat_status.svg') 8;
   }
 
-  .pictochat-enter-highlight {
+  .ds-css .pictochat-enter-highlight {
     & *::-moz-selection {
       background-color: var(--color-ds-pictochat-enter);
       color: black;
@@ -1022,7 +985,7 @@ loading   - loading animation
     }
   }
 
-  .pictochat-exit-highlight {
+  .ds-css .pictochat-exit-highlight {
     & *::-moz-selection {
       background-color: var(--color-ds-pictochat-exit);
       color: black;
@@ -1041,14 +1004,14 @@ loading   - loading animation
     }
   }
 
-  .radio-button {
+  .ds-css .radio-button {
     position: relative;
     height: var(--height-button-radio);
     width: var(--width-button-radio);
     background-clip: border-box;
   }
 
-  .radio-button > label {
+  .ds-css .radio-button > label {
     position: absolute;
     top: calc(1 / 2 * 100%);
     z-index: 10;
