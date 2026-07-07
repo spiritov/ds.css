@@ -12,6 +12,11 @@ loading   - loading animation
   src: url('./assets/fonts/nitrods-font.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'ds-clock';
+  src: url('./assets/fonts/ds-clock-numbers-font.ttf') format('truetype');
+}
+
 @layer preflight {
   /*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -41,6 +46,7 @@ loading   - loading animation
   .ds-css {
     /* font */
     --font-system: 'ds-system', 'system-ui';
+    --font-clock: 'ds-clock', 'system-ui';
 
     /* colors */
     --color-ds-darkgrey: #494949;

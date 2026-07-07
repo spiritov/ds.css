@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./dev.css" />
+    <link rel="stylesheet" href="./ds-scoped.css" />
     <script type="module" src="./widgets/ds-calendar.js"></script>
+    <script type="module" src="./widgets/ds-clock.js"></script>
   </head>
 
   <body class="ds-css">
     <ds-calendar hide-border></ds-calendar>
+    <div class="ds-grid" style="width: fit-content">
+      <ds-clock hide-border style="--color: var(--color-ds-teal)"></ds-clock>
+    </div>
 
     <details>
       <summary>Details</summary>
