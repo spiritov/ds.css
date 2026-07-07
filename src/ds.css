@@ -107,7 +107,7 @@ loading   - loading animation
     --height-details-p: 94px;
     --height-bar: 32px;
     --height-bar-lg: 46px;
-    /* opininated, matches smaller text (exact 36px) */
+    /* exact is 36px */
     --height-pictochat-header: 34px;
     --height-info: 96px;
     --height-info-container: 90px;
@@ -120,7 +120,6 @@ loading   - loading animation
 
     /* global styles */
     font-family: var(--font-system), 'Segoe UI', system-ui, Roboto, Helvetica, Arial;
-    /* opinionated, slightly smaller than exact */
     font-size: 17px;
     line-height: 26px;
     text-rendering: geometricPrecision;
@@ -606,7 +605,7 @@ loading   - loading animation
     padding-inline: calc(var(--text-padding) * 1.5);
     border-color: black;
     color: white;
-    outline-style: none;
+    outline: none;
     & *::-moz-selection {
       background-color: var(--color-ds-text-focus);
     }
@@ -623,28 +622,37 @@ loading   - loading animation
     background: url('./assets/images/input.png') -1px;
   }
 
+  input[type='text']:focus {
+    outline: 2px solid var(--color-ds-text-focus);
+  }
+
   input[type='radio'] {
     height: var(--height-button-radio);
     width: var(--width-button-radio);
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     border-style: solid;
     border-width: 2px;
     border-color: var(--color-ds-darkgrey);
     background-image: url('./assets/images/button_radio.png');
   }
 
+  /* input[type='radio']:focus {
+    outline: 2px solid var(--color-ds-text-focus);
+  } */
+
   input[type='radio']:checked {
     background-blend-mode: hard-light;
   }
 
   button {
-    background-color: var(--color-ds-button-default);
     /* "preload" button hold svg */
     @starting-style {
       background-image: url('./assets/images/button_active.png');
     }
+
+    background-color: var(--color-ds-button-default);
     height: var(--width-button-square);
     width: var(--width-button);
     cursor: pointer;
@@ -659,7 +667,7 @@ loading   - loading animation
     flex-direction: column;
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
+         user-select: none;
   }
 
   button:active {
@@ -667,6 +675,11 @@ loading   - loading animation
   }
 
   details > summary {
+    /* "preload" details open svg */
+    @starting-style {
+      background-image: url('./assets/images/details.png');
+    }
+
     height: var(--height-details-summary);
     width: var(--width-details-summary);
     border-style: solid;
@@ -675,13 +688,7 @@ loading   - loading animation
     text-align: center;
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
-
-    /* todo: use inset border and repeating gradient for details p */
-    /* "preload" details open svg */
-    @starting-style {
-      background-image: url('./assets/images/details.png');
-    }
+         user-select: none;
 
     background-image: url('./assets/images/details_head.png');
     list-style: none;
@@ -752,7 +759,7 @@ loading   - loading animation
 
     -o-border-image: url('./assets/images/alert_border.svg') 15;
 
-    border-image: url('./assets/images/alert_border.svg') 15;
+       border-image: url('./assets/images/alert_border.svg') 15;
     background: repeating-linear-gradient(
       black,
       black 2px,
@@ -891,7 +898,7 @@ loading   - loading animation
 
     -o-border-image: url('./assets/images/info_border.svg') 4;
 
-    border-image: url('./assets/images/info_border.svg') 4;
+       border-image: url('./assets/images/info_border.svg') 4;
   }
 
   /* todo: include this class in docs */
@@ -938,7 +945,7 @@ loading   - loading animation
       var(--color-ds-pictochat-border) 8px
     );
     -o-border-image: url('./assets/images/pictochat_border.svg') 8;
-    border-image: url('./assets/images/pictochat_border.svg') 8;
+       border-image: url('./assets/images/pictochat_border.svg') 8;
   }
 
   .pictochat-window > div {
@@ -976,7 +983,7 @@ loading   - loading animation
 
     -o-border-image: url('./assets/images/pictochat_message_border.svg') 8;
 
-    border-image: url('./assets/images/pictochat_message_border.svg') 8;
+       border-image: url('./assets/images/pictochat_message_border.svg') 8;
 
     background-size: cover;
     background-position: top;
@@ -1000,7 +1007,7 @@ loading   - loading animation
 
     -o-border-image: url('./assets/images/pictochat_status.svg') 8;
 
-    border-image: url('./assets/images/pictochat_status.svg') 8;
+       border-image: url('./assets/images/pictochat_status.svg') 8;
   }
 
   .pictochat-enter-highlight {

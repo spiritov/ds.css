@@ -657,7 +657,6 @@ loading   - loading animation
 
   button:active {
     background-image: url('./assets/images/button_active.png');
-    outline: 8px orange;
   }
 
   details > summary {

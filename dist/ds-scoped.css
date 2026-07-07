@@ -573,7 +573,7 @@ loading   - loading animation
     padding-inline: calc(var(--text-padding) * 1.5);
     border-color: black;
     color: white;
-    outline-style: none;
+    outline: none;
     & *::-moz-selection {
       background-color: var(--color-ds-text-focus);
     }
@@ -590,6 +590,10 @@ loading   - loading animation
     background: url('./assets/images/input.png') -1px;
   }
 
+  .ds-css input[type='text']:focus {
+    outline: 2px solid var(--color-ds-text-focus);
+  }
+
   .ds-css input[type='radio'] {
     height: var(--height-button-radio);
     width: var(--width-button-radio);
@@ -602,16 +606,21 @@ loading   - loading animation
     background-image: url('./assets/images/button_radio.png');
   }
 
+  /* input[type='radio']:focus {
+    outline: 2px solid var(--color-ds-text-focus);
+  } */
+
   .ds-css input[type='radio']:checked {
     background-blend-mode: hard-light;
   }
 
   .ds-css button {
-    background-color: var(--color-ds-button-default);
     /* "preload" button hold svg */
     @starting-style {
       background-image: url('./assets/images/button_active.png');
     }
+
+    background-color: var(--color-ds-button-default);
     height: var(--width-button-square);
     width: var(--width-button);
     cursor: pointer;
@@ -634,6 +643,11 @@ loading   - loading animation
   }
 
   .ds-css details > summary {
+    /* "preload" details open svg */
+    @starting-style {
+      background-image: url('./assets/images/details.png');
+    }
+
     height: var(--height-details-summary);
     width: var(--width-details-summary);
     border-style: solid;
@@ -643,12 +657,6 @@ loading   - loading animation
     -webkit-user-select: none;
     -moz-user-select: none;
          user-select: none;
-
-    /* todo: use inset border and repeating gradient for details p */
-    /* "preload" details open svg */
-    @starting-style {
-      background-image: url('./assets/images/details.png');
-    }
 
     background-image: url('./assets/images/details_head.png');
     list-style: none;
