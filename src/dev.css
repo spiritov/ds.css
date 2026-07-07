@@ -924,6 +924,9 @@ loading   - loading animation
       var(--color-ds-pictochat-border) 6px,
       var(--color-ds-pictochat-border) 8px
     );
+    /* chrome fix for gradient to render properly */
+    background-size: 50% 50%;
+
     border-image: url('./assets/images/pictochat_border.svg') 8;
   }
 
