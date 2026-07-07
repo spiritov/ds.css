@@ -23,6 +23,23 @@ or, install with npm
 npm i @spiritov/ds.css
 ```
 
+## scoped styles
+if you'd like to only use ds.css in specific parts of your html, you can import `ds-scoped.css` instead, and use it inside a parent div with `class="ds-css"`
+
+```html
+<!-- in your html's <head> -->
+<link rel="stylesheet" href="https://unpkg.com/@spiritov/ds.css/dist/ds-scoped.css" />
+
+<!-- in your html -->
+<button>a standard button</button>
+
+<div class="ds-css">
+  <button>a DS button!</button>
+</div>
+```
+
+<img width="176" height="73" alt="image" src="https://github.com/user-attachments/assets/a4a536ba-6099-4aa9-b0f7-7185967ded8f" />
+
 ## using widgets (web components)
 
 included web components can also be imported from unpkg. for example, to import the calendar..
@@ -56,7 +73,6 @@ or, install with npm for use in a web framework. with Svelte, this could look li
 
 ## todo
 
-- provide a way to use ds.css nested / scoped within a page
 - clock web component ([like here](https://ds.dreamyard.xyz/))
 - more pictochat components(?)
 - extra ds-inspired components(?)
