@@ -72,7 +72,5 @@ or, install with npm for use in a web framework. with Svelte, this could look li
 ```
 
 ## todo
-
-- clock web component ([like here](https://ds.dreamyard.xyz/))
 - more pictochat components(?)
 - extra ds-inspired components(?)
