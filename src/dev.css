@@ -50,8 +50,8 @@ loading   - loading animation
 @layer base {
   html {
     /* font */
-    --font-system: 'ds-system', 'system-ui';
-    --font-clock: 'ds-clock', 'system-ui';
+    --font-system: 'ds-system', system-ui;
+    --font-clock: 'ds-clock', system-ui;
 
     /* colors */
     --color-ds-darkgrey: #494949;
