@@ -1,4 +1,5 @@
-<img width="623" height="253" alt="image" src="https://github.com/user-attachments/assets/6abc39b7-ddaf-4b98-96d3-09ec56bbba18" />
+<img width="975" height="263" alt="image" src="https://github.com/user-attachments/assets/822901ff-153d-4154-89c4-ebee430d809a" />
+
 
 # ds.css
 
