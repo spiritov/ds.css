@@ -6,7 +6,7 @@
     "build": "npm run build:ds && npm run build:ds-scoped && npm run build:npm"
   },
   "name": "@spiritov/ds.css",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "description": "A css framework recreating the DS Lite's UI",
   "type": "module",
   "main": "./dist/ds.css",
