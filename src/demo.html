@@ -14,6 +14,12 @@
       <ds-clock hide-border style="--color: var(--color-ds-teal)"></ds-clock>
     </div>
 
+    <div class="ds-grid" id="grid">
+      <button id="grid-btn"></button>
+    </div>
+
+    <!-- <div class="ds-grid" id="#grid"></div> -->
+
     <details>
       <summary>Details</summary>
       <p>
@@ -130,3 +136,16 @@
     </div>
   </body>
 </html>
+
+<style>
+  #grid {
+    width: calc(var(--ds-grid-gap) * 12);
+    height: calc(var(--ds-grid-gap) * 8);
+  }
+
+  #grid-btn {
+    position: relative;
+    left: calc(var(--ds-grid-gap) * 2);
+    top: calc(var(--ds-grid-gap) * 2);
+  }
+</style>
