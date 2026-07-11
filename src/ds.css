@@ -53,6 +53,10 @@ loading   - loading animation
     --font-system: 'ds-system', system-ui;
     --font-clock: 'ds-clock', system-ui;
 
+    /* grid sizes */
+    --ds-grid-gap: 32px;
+    --ds-grid-gap-lg: 96px;
+
     /* colors */
     --color-ds-darkgrey: #494949;
     --color-ds-button-default: #808080;
@@ -88,6 +92,7 @@ loading   - loading animation
     --color-ds-magenta: #d300eb;
     --color-ds-fuschia: #fb0092;
 
+    /* sizing */
     --width-alert: 412px;
     --width-button: 160px;
     --width-button-lg: 220px;
@@ -121,7 +126,6 @@ loading   - loading animation
     --height-info-text: 64px;
 
     --size-info-square: 90px;
-
     --text-padding: 4px;
 
     /* global styles */
@@ -695,6 +699,7 @@ loading   - loading animation
     -webkit-user-select: none;
     -moz-user-select: none;
          user-select: none;
+    background-blend-mode: hard-light;
 
     background-image: url('./assets/images/details_head.png');
     list-style: none;
@@ -829,6 +834,7 @@ loading   - loading animation
   }
 
   .ds-grid {
+    position: relative;
     background:
       repeating-linear-gradient(
         transparent,
@@ -852,6 +858,7 @@ loading   - loading animation
   }
 
   .ds-grid-lg {
+    position: relative;
     background-image: url('./assets/images/grid_lg.png');
   }
 
@@ -958,7 +965,10 @@ loading   - loading animation
        border-image: url('./assets/images/pictochat_border.svg') 8;
   }
 
-  .pictochat-window > div {
+  .pictochat-window > div,
+  .pictochat-window > span,
+  .pictochat-window > .pictochat-message,
+  .pictochat-window > .pictochat-status {
     margin-inline: var(--text-padding);
   }
 
