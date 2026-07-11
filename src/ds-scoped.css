@@ -138,7 +138,6 @@ loading   - loading animation
     }
 
     /* background color classes */
-    /* ds theme colors */
     .ds-slate {
       background-color: var(--color-ds-slate);
     }
@@ -735,9 +734,9 @@ loading   - loading animation
       background-color: var(--color-ds-text-focus);
     }
 
-    -o-border-image: url('./assets/images/alert_border.svg') 15;
+    -o-border-image: url('./assets/images/alert_border.png') 15;
 
-       border-image: url('./assets/images/alert_border.svg') 15;
+       border-image: url('./assets/images/alert_border.png') 15;
     background: repeating-linear-gradient(
       black,
       black 2px,
@@ -874,9 +873,9 @@ loading   - loading animation
     padding-inline: var(--text-padding);
     color: white;
 
-    -o-border-image: url('./assets/images/info_border.svg') 4;
+    -o-border-image: url('./assets/images/info_border.png') 4;
 
-       border-image: url('./assets/images/info_border.svg') 4;
+       border-image: url('./assets/images/info_border.png') 4;
   }
 
   /* todo: include this class in docs */
@@ -925,9 +924,9 @@ loading   - loading animation
     /* chrome fix for gradient to render properly */
     background-size: 50% 50%;
 
-    -o-border-image: url('./assets/images/pictochat_border.svg') 8;
+    -o-border-image: url('./assets/images/pictochat_border.png') 8;
 
-       border-image: url('./assets/images/pictochat_border.svg') 8;
+       border-image: url('./assets/images/pictochat_border.png') 8;
   }
 
   .ds-css .pictochat-window > div, .ds-css .pictochat-window > span, .ds-css .pictochat-window > .pictochat-message, .ds-css .pictochat-window > .pictochat-status {
@@ -950,7 +949,7 @@ loading   - loading animation
     text-wrap: nowrap;
     align-content: end;
 
-    border-image-source: url('./assets/images/pictochat_message_header_border.svg');
+    border-image-source: url('./assets/images/pictochat_message_header_border.png');
     border-image-slice: 4;
     border-width: 0px 4px 4px 0px;
   }
@@ -963,9 +962,9 @@ loading   - loading animation
     padding-inline: var(--text-padding);
     width: var(--width-pictochat);
 
-    -o-border-image: url('./assets/images/pictochat_message_border.svg') 8;
+    -o-border-image: url('./assets/images/pictochat_message_border.png') 8;
 
-       border-image: url('./assets/images/pictochat_message_border.svg') 8;
+       border-image: url('./assets/images/pictochat_message_border.png') 8;
 
     background-size: cover;
     background-position: top;
@@ -986,9 +985,9 @@ loading   - loading animation
     padding-inline: var(--text-padding);
     width: var(--width-pictochat);
 
-    -o-border-image: url('./assets/images/pictochat_status.svg') 8;
+    -o-border-image: url('./assets/images/pictochat_status.png') 8;
 
-       border-image: url('./assets/images/pictochat_status.svg') 8;
+       border-image: url('./assets/images/pictochat_status.png') 8;
   }
 
   .ds-css .pictochat-enter-highlight {
