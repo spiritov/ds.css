@@ -884,7 +884,7 @@ loading   - loading animation
     padding-inline: var(--text-padding);
     color: white;
 
-    border-image: url('./assets/images/info_border.png') 4;
+    border-image: url('./assets/images/info_border.png') 4 / auto / 0px space round;
   }
 
   /* todo: include this class in docs */
@@ -933,7 +933,7 @@ loading   - loading animation
     /* chrome fix for gradient to render properly */
     background-size: 50% 50%;
 
-    border-image: url('./assets/images/pictochat_border.png') 8;
+    border-image: url('./assets/images/pictochat_border.png') 8 / auto / 0px space round;
   }
 
   .pictochat-window > div,
@@ -961,6 +961,7 @@ loading   - loading animation
 
     border-image-source: url('./assets/images/pictochat_message_header_border.png');
     border-image-slice: 4;
+    border-image-repeat: 0px space round;
     border-width: 0px 4px 4px 0px;
   }
 
@@ -972,7 +973,7 @@ loading   - loading animation
     padding-inline: var(--text-padding);
     width: var(--width-pictochat);
 
-    border-image: url('./assets/images/pictochat_message_border.png') 8;
+    border-image: url('./assets/images/pictochat_message_border.png') 8 / auto / 0px space round;
 
     background-size: cover;
     background-position: top;
@@ -994,7 +995,7 @@ loading   - loading animation
     padding-inline: var(--text-padding);
     width: var(--width-pictochat);
 
-    border-image: url('./assets/images/pictochat_status.png') 8;
+    border-image: url('./assets/images/pictochat_status.png') 8 / auto / 0px space round;
   }
 
   .pictochat-enter-highlight {
