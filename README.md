@@ -1,5 +1,5 @@
-![NPM Version](https://img.shields.io/npm/v/%40spiritov%2Fds.css)
-![npm package minimized gzipped size](https://img.shields.io/bundlejs/size/%40spiritov%2Fds.css)
+[![NPM Version](https://img.shields.io/npm/v/%40spiritov%2Fds.css)](https://www.npmjs.com/package/@spiritov/ds.css)
+[![npm package minimized gzipped size](https://img.shields.io/bundlejs/size/%40spiritov%2Fds.css)](https://www.npmjs.com/package/@spiritov/ds.css)
 <img width="975" height="263" alt="image" src="https://github.com/user-attachments/assets/822901ff-153d-4154-89c4-ebee430d809a" />
 
 
