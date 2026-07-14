@@ -1985,7 +1985,7 @@ function Er(e, t) {
 			clearInterval(e);
 		};
 	});
-	let i = pr(t, "hideBorder", 7, "truthy"), a = /* @__PURE__ */ N(F(i()));
+	let i = pr(t, "hideBorder", 7, "truthy");
 	var o = {
 		get hideBorder() {
 			return i();
@@ -2012,7 +2012,7 @@ function Er(e, t) {
 	Sr(L(te)), C(te);
 	var ne = R(te, 2);
 	return Sr(L(ne)), C(ne), C(v), C(s), mn((e, t) => {
-		c = fr(s, "", c, { "box-shadow": $(a) ? "0px 0px 0px 2px #d3d3d3,0px 0px 0px 4px #e3e3e3" : "" }), f = fr(d, "", f, e), m = fr(p, "", m, t), g = fr(h, "", g, { rotate: `${$(r) / 60}turn` });
+		c = fr(s, "", c, { "box-shadow": i() ? "0px 0px 0px 2px #d3d3d3,0px 0px 0px 4px #e3e3e3" : "" }), f = fr(d, "", f, e), m = fr(p, "", m, t), g = fr(h, "", g, { rotate: `${$(r) / 60}turn` });
 	}, [() => ({ rotate: `${n.getHours() % 12 / 12 + 1 / 12 * (n.getMinutes() / 60)}turn` }), () => ({ rotate: `${n.getMinutes() / 60}turn` })]), Qn(e, s), Ve(o);
 }
 customElements.define("ds-clock", yr(Er, { hideBorder: {

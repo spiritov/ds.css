@@ -2283,7 +2283,7 @@ function Xr(e, t) {
 			clearInterval(e);
 		};
 	});
-	let c = Fr(t, "hideBorder", 7, "truthy"), l = /* @__PURE__ */ P(qt(c()));
+	let c = Fr(t, "hideBorder", 7, "truthy");
 	var u = {
 		get hideBorder() {
 			return c();
@@ -2334,7 +2334,7 @@ function Xr(e, t) {
 		D(d), D(s), _n(() => sr(f, $(o) >= 0 && $(o) < $(i) ? $(o) + 1 : "")), ir(e, s);
 	}), D(C), D(h), D(d), _n((e, t) => {
 		Mr(f, 1, `h-[32px] relative z-10 bg-white text-center tracking-[4px] text-[17.4px]
-    ${$(l) ? "border-(--color-ds-grid-border) border-2 w-[226px]" : "w-[222px]"}`), sr(m, `${e ?? ""}/${t ?? ""}`), g = Pr(h, "", g, { "box-shadow": $(l) ? "0px 0px 0px 2px #d3d3d3,0px 0px 0px 4px #e3e3e3" : "none" });
+    ${c() ? "border-(--color-ds-grid-border) border-2 w-[226px]" : "w-[222px]"}`), sr(m, `${e ?? ""}/${t ?? ""}`), g = Pr(h, "", g, { "box-shadow": c() ? "0px 0px 0px 2px #d3d3d3,0px 0px 0px 4px #e3e3e3" : "none" });
 	}, [() => (n.getMonth() + 1).toString().padStart(2, "0"), () => n.getFullYear()]), ir(e, d), Be(u);
 }
 customElements.define("ds-calendar", Vr(Xr, { hideBorder: {

@@ -655,6 +655,11 @@ loading   - loading animation
     background-blend-mode: hard-light;
   }
 
+  input[type='radio']:focus-visible {
+    outline: 2px solid var(--color-ds-text-focus);
+    outline-offset: 2px;
+  }
+
   button {
     /* "preload" button hold svg */
     @starting-style {
@@ -662,7 +667,7 @@ loading   - loading animation
     }
 
     background-color: var(--color-ds-button-default);
-    height: var(--width-button-square);
+    height: var(--height-button);
     width: var(--width-button);
     cursor: pointer;
     border-color: var(--color-ds-darkgrey);
@@ -702,6 +707,11 @@ loading   - loading animation
 
     background-image: url('./assets/images/details_head.png');
     list-style: none;
+  }
+
+  details > summary:focus-visible {
+    outline: 2px solid var(--color-ds-text-focus);
+    outline-offset: 2px;
   }
 
   details:open > p {
@@ -989,7 +999,7 @@ loading   - loading animation
 
     border-image-source: url('./assets/images/pictochat_message_header_border.png');
     border-image-slice: 4;
-    border-image-repeat: 0px space round;
+    border-image-repeat: space round;
     border-width: 0px 4px 4px 0px;
   }
 
