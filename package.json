@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build:npm": "cp -r ./src/assets/* ./dist/assets && cp ./src/widgets/* ./dist/widgets && cp ./src/ds.css ./src/ds-scoped.css ./dist",
+    "build:npm": "node ./scripts/copy-dist.mjs",
     "build:ds": "postcss ./src/dev.css --config ./postcss/default -o ./src/ds.css",
     "build:ds-scoped": "postcss ./src/dev.css --config ./postcss/prefix -o ./src/ds-scoped.css",
     "build": "npm run build:ds && npm run build:ds-scoped && npm run build:npm"
