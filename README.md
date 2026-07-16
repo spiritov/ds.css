@@ -1,6 +1,5 @@
 <img width="975" height="263" alt="image" src="https://github.com/user-attachments/assets/822901ff-153d-4154-89c4-ebee430d809a" />
 
-
 # ds.css
 
 A css framework recreating parts of the DS / DS Lite's UI. Preview what's included [here](https://css.ds.dreamyard.xyz)!
@@ -25,6 +24,7 @@ npm i @spiritov/ds.css
 ```
 
 ## scoped styles
+
 if you'd like to only use ds.css in specific parts of your html, you can import `ds-scoped.css` instead, and use it inside a parent div with `class="ds-css"`
 
 ```html
@@ -47,7 +47,7 @@ included web components can also be imported from unpkg. for example, to import 
 
 ```html
 <!-- in your html's <head> -->
-<script type="module" src="https://unpkg.com/@spiritov/ds.css/dist/widgets/ds-calendar.js" />
+<script type="module" src="https://unpkg.com/@spiritov/ds.css/dist/widgets/ds-calendar.js"></script>
 
 <!-- in your html -->
 <ds-calendar></ds-calendar>
@@ -56,7 +56,7 @@ included web components can also be imported from unpkg. for example, to import 
 you can also download and import them manually
 
 ```html
-<script type="module" src="./widgets/ds-calendar.js" />
+<script type="module" src="./widgets/ds-calendar.js"></script>
 ```
 
 or, install with npm for use in a web framework. with Svelte, this could look like
@@ -73,5 +73,6 @@ or, install with npm for use in a web framework. with Svelte, this could look li
 ```
 
 ## todo
+
 - more pictochat components(?)
 - extra ds-inspired components(?)
