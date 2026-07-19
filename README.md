@@ -56,7 +56,7 @@ included web components can also be imported from unpkg. for example, to import 
 you can also download and import them manually
 
 ```html
-<script type="module" src="./widgets/ds-calendar.js"></script>
+<script type="module" src="./dist/widgets/ds-calendar.js"></script>
 ```
 
 or, install with npm for use in a web framework. with Svelte, this could look like
