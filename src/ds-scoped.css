@@ -630,7 +630,7 @@ loading   - loading animation
     }
 
     background-color: var(--color-ds-button-default);
-    height: var(--width-button-square);
+    height: var(--height-button);
     width: var(--width-button);
     cursor: pointer;
     border-color: var(--color-ds-darkgrey);
@@ -781,7 +781,7 @@ loading   - loading animation
 
   .ds-css .button-square {
     width: var(--width-button-square);
-    height: var(--width-button-square);
+    height: var(--height-button);
     background-image: url('./assets/images/button_square.png');
   }
 
